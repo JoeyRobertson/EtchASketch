@@ -1,0 +1,15 @@
+#wrapper {
+    background-color: red;
+    width: 192px;
+    height: 192px;
+    margin: auto;
+}
+
+.unit {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  display: inline-block;
+  margin-left: 1px;
+  float: left;
+}
