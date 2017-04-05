@@ -1,15 +1,19 @@
 #wrapper {
-    background-color: red;
-    width: 192px;
-    height: 192px;
-    margin: auto;
+    border: 1px solid black;
+    width: 700px;
+    height: 700px;
+    margin: 20px auto;
 }
 
 .unit {
-  width: 10px;
-  height: 10px;
-  background-color: blue;
   display: inline-block;
-  margin-left: 1px;
   float: left;
+  border: 2px;
+  border-color: black;
+}
+
+#reset {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
