@@ -21,8 +21,7 @@ function drawBoard() {
   for(var i=0; i < gridSize; i++) {
     for(var j=0; j < gridSize; j++){
       var unit = $('<div class="unit"></div>');
-      $('.unit').height(cellSize);
-      $('.unit').width(cellSize);
+      $('.unit').css({'width':cellSize+'px', 'height':cellSize + 'px'});
       unit.appendTo('#wrapper');
     }
   }
