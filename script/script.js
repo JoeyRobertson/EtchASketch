@@ -11,13 +11,13 @@ $(document).ready(function() {
   $('#reset').click(function(){
     $('.unit').css("background-color", "white");
     gridSize = prompt("what size grid would you like?");
-    cellSize = 700/gridSize;
     drawBoard();
   });
 
 });
 
 function drawBoard() {
+  cellSize = 700/gridSize;
   for(var i=0; i < gridSize; i++) {
     for(var j=0; j < gridSize; j++){
       var unit = $('<div class="unit"></div>');
