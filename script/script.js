@@ -1,14 +1,10 @@
-var gridSize = 17;
-var cellSize = 700/gridSize;
+var gridSize = 16;
+var cellSize = 600/gridSize;
 
 $(document).ready(function() {
   drawBoard();
 
-  $('.unit').hover(function(){
-    $(this).css("background-color", "black");
-  });
-
-  $('#reset').click(function(){
+ $('#reset').click(function(){
     $('.unit').css("background-color", "white");
     gridSize = prompt("what size grid would you like?");
     drawBoard();
@@ -17,12 +13,16 @@ $(document).ready(function() {
 });
 
 function drawBoard() {
-  cellSize = 700/gridSize;
+  $('#wrapper').empty()
+  cellSize = 600/gridSize;
   for(var i=0; i < gridSize; i++) {
     for(var j=0; j < gridSize; j++){
       var unit = $('<div class="unit"></div>');
-      $('.unit').css({'width':cellSize+'px', 'height':cellSize + 'px'});
+      unit.css({'width':cellSize+'px', 'height':cellSize + 'px'});
       unit.appendTo('#wrapper');
     }
   }
+  $('.unit').hover(function(){
+    $(this).css("background-color", "black");
+  });
 }
