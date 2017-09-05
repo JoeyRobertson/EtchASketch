@@ -1,19 +1,17 @@
 var gridSize = 16;
 var cellSize = 600/gridSize;
 
-$(document).ready(function() {
+$(document).ready(function() { //main
   drawBoard();
 
- $('#reset').click(function(){
-    $('.unit').css("background-color", "white");
-    gridSize = prompt("what size grid would you like?");
-    drawBoard();
-  });
+ $('#reset').click(newBoard);
 
 });
 
+
+//All Functions
 function drawBoard() {
-  $('#wrapper').empty()
+  $('#wrapper').empty();
   cellSize = 600/gridSize;
   for(var i=0; i < gridSize; i++) {
     for(var j=0; j < gridSize; j++){
@@ -35,3 +33,9 @@ function randomColor() {
   }
   return color;
 }
+
+function newBoard(){
+   $('.unit').css("background-color", "white");
+   gridSize = prompt("what size grid would you like?");
+   drawBoard();
+ }
